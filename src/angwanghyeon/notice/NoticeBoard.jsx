@@ -3,8 +3,21 @@ import style from '../css/NoticeBoard.css'
 import { VscSearch } from 'react-icons/vsc';
 import { Link, useNavigate } from 'react-router-dom';
 import { noticeData } from '../data/Data';
-import TestTr from './TestTr';
 import Paging from './Paging';
+
+const TestTr = (props) => {
+  const navigate = useNavigate();
+  const {no, category, title, content, createDate} = props.data;
+  
+  return (
+    <tr onClick={()=>navigate('/notice/detail/'+no)}>
+      <td>{no}</td>
+      <td>{category}</td>
+      <td>{title}</td>
+      <td>{createDate}</td>
+    </tr>
+  );
+};
 
 const NoticeBoard = () => {
   const navigate = useNavigate();

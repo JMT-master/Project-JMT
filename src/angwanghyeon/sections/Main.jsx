@@ -12,6 +12,10 @@ import { knowledgeData, noticeData, qnaData } from '../data/Data';
 import QnaBoardDetail from '../components/QnaBoardDetail';
 import data from '../data/festival.json';
 import FestivalDetail from '../components/FestivalDetail';
+import TravelSchedule from './../components/TravelSchedule';
+import SelectSchedule from './../../notaejong/components/SelectSchedule';
+import Mypage from './../../notaejong/components/Mypage';
+import Curator from './../../notaejong/components/Curator';
 const Main = () => {
     const [newNoticedata, setNewNoticeData] = useState(noticeData);
     const [newQnaData, setNewQnaData] = useState(qnaData);
@@ -29,7 +33,6 @@ const Main = () => {
                 <Route path='/info/knowledge/write' element={<KnowledgeWrite></KnowledgeWrite>}></Route>
                 <Route path='/info/knowledge/detail/:id?' element={<KnowledgeDetail data={newKnowledgeData}></KnowledgeDetail>}></Route>
                 <Route path='/info/festival' element={<Festival></Festival>}></Route>
-                <Route path='/info/festival/detail/:id?' element={<FestivalDetail data={newFestivalData}></FestivalDetail>}></Route>
                 <Route path='/login' element={<Login></Login>}></Route>
             </Routes>
         </div>
